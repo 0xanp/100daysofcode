@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_ace import st_ace
 
 def page_config():
     # ---- PAGE CONFIG ----
@@ -23,7 +24,7 @@ def page_config():
 # ---- DAY 1 ----
 def day_1():
     with st.expander("Day 1 - Array", expanded=False):
-        tab1, tab2, tab3 = st.tabs(["Concepts", "Code examples", "Notes"])
+        tab1, tab2, tab3 = st.tabs(["Concepts", "Code examples", "Notes and Practicing"])
         with tab1:
             st.write("""
             Arrays hold values of the same type at contiguous memory locations. 
@@ -131,7 +132,7 @@ Element at index 9: 1000
                 st.write('The output from this program is:')
                 st.code(java_output, language='java')
         with tab3:
-            st.write("Notes")
+            st.write('Notes')
         
 # ---- DAY 2 ----     
 def day_2():

@@ -3,15 +3,15 @@ import streamlit as st
 def page_config():
     # ---- PAGE CONFIG ----
     st.set_page_config(
-        page_title="100 days of code",
+        page_title="References",
         page_icon=":computer:",
         layout="wide",
         initial_sidebar_state="expanded",
     )
-
-    # ---- TITLE AND HEADER ----
-    st.title("100 days of code")
     
+    # ---- TITLE AND HEADER ----
+    st.title("References")
+
     # ---- HIDING DEFAUT WATERMARK ----
     hide_menu_style = """
             <style>
@@ -23,8 +23,13 @@ def page_config():
 
 def main():
     page_config()
-    st.write("Week 1 to Week 4: Basics, Data Structures and Algorithms")
-    st.write("Week 5 to Week 12: In-depth Practice with Leetcode")
+    st.write("""
+    [1]: [Tech Interview Handbook](https://www.techinterviewhandbook.org/)
+
+    [2]: [Python3 Official Language Docs](https://docs.python.org/3/contents.html)
+
+    [3]: [Java Official Language Docs](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
+    """)
 
 if __name__ == "__main__":
     main()

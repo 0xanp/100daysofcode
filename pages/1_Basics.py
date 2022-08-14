@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_ace import st_ace
+from streamlit_embedcode import github_gist
 
 def page_config():
     # ---- PAGE CONFIG ----
@@ -24,7 +24,7 @@ def page_config():
 # ---- DAY 1 ----
 def day_1():
     with st.expander("Day 1 - Array", expanded=False):
-        tab1, tab2, tab3 = st.tabs(["Concepts", "Code examples", "Notes and Practicing"])
+        tab1, tab2 = st.tabs(["Concepts", "Code examples"])
         with tab1:
             st.write("""
             Arrays hold values of the same type at contiguous memory locations. 
@@ -47,92 +47,16 @@ def day_1():
             """)
         with tab2:
             python, java = st.tabs(["Python3", "Java"])
-            python_code = '''>>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
->>> fruits.count('apple')
-2
->>> fruits.count('tangerine')
-0
->>> fruits.index('banana')
-3
->>> fruits.index('banana', 4)  # Find next banana starting a position 4
-6
->>> fruits.reverse()
->>> fruits
-['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
->>> fruits.append('grape')
->>> fruits
-['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
->>> fruits.sort()
->>> fruits
-['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']
->>> fruits.pop()
-'pear'
-            '''
-            java_code = '''class ArrayDemo {
-    public static void main(String[] args) {
-        // declares an array of integers
-        int[] anArray;
-
-        // allocates memory for 10 integers
-        anArray = new int[10];
-           
-        // initialize first element
-        anArray[0] = 100;
-        // initialize second element
-        anArray[1] = 200;
-        // and so forth
-        anArray[2] = 300;
-        anArray[3] = 400;
-        anArray[4] = 500;
-        anArray[5] = 600;
-        anArray[6] = 700;
-        anArray[7] = 800;
-        anArray[8] = 900;
-        anArray[9] = 1000;
-
-        System.out.println("Element at index 0: "
-                           + anArray[0]);
-        System.out.println("Element at index 1: "
-                           + anArray[1]);
-        System.out.println("Element at index 2: "
-                           + anArray[2]);
-        System.out.println("Element at index 3: "
-                           + anArray[3]);
-        System.out.println("Element at index 4: "
-                           + anArray[4]);
-        System.out.println("Element at index 5: "
-                           + anArray[5]);
-        System.out.println("Element at index 6: "
-                           + anArray[6]);
-        System.out.println("Element at index 7: "
-                           + anArray[7]);
-        System.out.println("Element at index 8: "
-                           + anArray[8]);
-        System.out.println("Element at index 9: "
-                           + anArray[9]);
-    }
-} 
-            '''
-            java_output = '''Element at index 0: 100
-Element at index 1: 200
-Element at index 2: 300
-Element at index 3: 400
-Element at index 4: 500
-Element at index 5: 600
-Element at index 6: 700
-Element at index 7: 800
-Element at index 8: 900
-Element at index 9: 1000
-'''
+            python_code = "https://gist.github.com/0xanp/58bc11362ec85a713cdb4fefcf6ce357"
+            java_code = "https://gist.github.com/0xanp/464cf4dbeb044c5e3f7a20e093581b54"
+            java_output = "https://gist.github.com/0xanp/929dfe645ef9130d533ffaacfa6dddf3"
             with python:
-                st.code(python_code, language='python')
+                github_gist(python_code,height=500)
             with java:
                 st.write("""The following program, `ArrayDemo`, creates an array of integers, puts some values in the array, and prints each value to standard output.""")
-                st.code(java_code, language='java')
+                github_gist(java_code,height=600)
                 st.write('The output from this program is:')
-                st.code(java_output, language='java')
-        with tab3:
-            st.write('Notes')
+                github_gist(java_output,height=300)
         
 # ---- DAY 2 ----     
 def day_2():

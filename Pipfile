@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 streamlit = "*"
 streamlit-ace = "*"
+streamlit-embedcode = "*"
 
 [dev-packages]
 

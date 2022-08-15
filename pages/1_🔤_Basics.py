@@ -5,7 +5,7 @@ def page_config():
     # ---- PAGE CONFIG ----
     st.set_page_config(
         page_title="Basics",
-        page_icon=":computer:",
+        page_icon=":abc:",
         layout="wide",
         initial_sidebar_state="expanded",
     )
@@ -61,13 +61,11 @@ def day_1():
 # ---- DAY 2 ----     
 def day_2():
     with st.expander("Day 2 - String"):
-        tab1, tab2, tab3 = st.tabs(["Concepts", "Code examples", "Notes"])
+        tab1, tab2= st.tabs(["Concepts", "Code examples"])
         with tab1:
             st.title("Concepts")
         with tab2:
             st.title("Code examples")
-        with tab3:
-            st.title("Notes")
 
 def main():
     page_config()

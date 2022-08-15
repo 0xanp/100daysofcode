@@ -4,7 +4,7 @@ def page_config():
     # ---- PAGE CONFIG ----
     st.set_page_config(
         page_title="References",
-        page_icon=":computer:",
+        page_icon=":books:",
         layout="wide",
         initial_sidebar_state="expanded",
     )

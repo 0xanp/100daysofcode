@@ -5,7 +5,7 @@ def page_config():
     # ---- PAGE CONFIG ----
     st.set_page_config(
         page_title="The Code Sandbox",
-        page_icon=":computer:",
+        page_icon=":closed_book:",
         layout="wide",
         initial_sidebar_state="expanded",
     )

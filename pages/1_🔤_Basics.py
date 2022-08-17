@@ -24,26 +24,12 @@ def page_config():
 # ---- DAY 1 ----
 def day_1():
     with st.expander("Day 1 - Array", expanded=False):
-        tab1, tab2 = st.tabs(["Concepts", "Code examples"])
+        tab1, tab2, tab3 = st.tabs(["Concepts", "Code examples","LeetCode"])
         with tab1:
             st.write("""
-            Arrays hold values of the same type at contiguous memory locations. 
-            
-            In an array, we're usually concerned about two things: 
-            - the position/index of an element (ordering)
-            - the element itself (data types/values)
-            \\
-            In some languages, the size of the array is dynamic and you do not
-            need to define before hand. Hence, people usually use these languages
-            (Python, Javascript, Ruby) for interviews.
-
-            **Advantages**
-            - Store multiple elements of the same type with one single variable name
-            - Accessing elements is fast as long as you have the index, as opposed to linked lists where you have to traverse from the head.
-            \\
-            **Disadvantages**
-            - Addition and removal of elements into/from the middle of an array is slow because the remaining elements need to be shifted to accommodate the new/missing element. An exception to this is if the position to be inserted/removed is at the end of the array.
-            - For certain languages where the array size is fixed, it cannot alter its size after initialization. If an insertion causes the total number of elements to exceed the size, a new array has to be allocated and the existing elements have to be copied over. The act of creating a new array and transferring elements over takes O(n) time.
+            ### Readings
+            - [Array cheatsheet for coding interviews](https://www.techinterviewhandbook.org/algorithms/array/[), Tech Interview Handbook
+            - [Array in Data Structure: What is, Arrays Operations](https://www.guru99.com/array-data-structure.html), Guru99
             """)
         with tab2:
             python, java = st.tabs(["Python3", "Java"])
@@ -57,6 +43,13 @@ def day_1():
                 github_gist(java_code,height=600)
                 st.write('The output from this program is:')
                 github_gist(java_output,height=300)
+        with tab3:
+            st.write("""
+            - [Two Sum](https://leetcode.com/problems/two-sum/)
+            - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+            - [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+            - [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+            """)
         
 # ---- DAY 2 ----     
 def day_2():

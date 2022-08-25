@@ -18,7 +18,6 @@ def page_layout():
             footer {visibility: hidden; }
             a:link,
             a:visited {
-            color: white;
             background-color: transparent;
             text-decoration: underline;
             }

@@ -47,7 +47,7 @@ def day_2():
         with tab1:
             st.title("Concepts")
         with tab2:
-            st.title("Code examples")
+            st.title("Code examples")   
 
 def page_layout():
     # ---- TITLE AND HEADER ----

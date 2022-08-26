@@ -17,8 +17,10 @@ def day_1():
         with tab1:
             st.write("""
             ### Readings
-            - [Array cheatsheet for coding interviews](https://www.techinterviewhandbook.org/algorithms/array/[), Tech Interview Handbook
+            - [Array cheatsheet for coding interviews](https://www.techinterviewhandbook.org/algorithms/array/), Tech Interview Handbook
             - [Array in Data Structure: What is, Arrays Operations](https://www.guru99.com/array-data-structure.html), Guru99
+            ### Videos
+            - [Arrays](https://www.coursera.org/lecture/data-structures/arrays-OsBSF), University of California San Diego
             """)
         with tab2:
             python, java = st.tabs(["Python3", "Java"])
@@ -36,31 +38,66 @@ def day_1():
             st.write("""
             - [Two Sum](https://leetcode.com/problems/two-sum/)
             - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
-            - [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
-            - [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
             """)
         
 # ---- DAY 2 ----     
 def day_2():
     with st.expander("Day 2 - String"):
-        tab1, tab2= st.tabs(["Concepts", "Code examples"])
+        tab1, tab2= st.tabs(["Concepts","LeetCode"])
         with tab1:
-            st.title("Concepts")
+            st.write("""
+            ### Readings
+            - [String cheatsheet for coding interviews](https://www.techinterviewhandbook.org/algorithms/string/), Tech Interview Handbook
+            - [Trie/Prefix Tree](https://en.wikipedia.org/wiki/Trie)
+            - [Suffix Tree](https://en.wikipedia.org/wiki/Suffix_tree)
+            - [Rabin Karp Algorithm](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm) for efficient searching of substring using a rolling hash
+            - [KMP Algorithm](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) for efficient searching of substring
+            """)
         with tab2:
-            st.title("Code examples")   
+            st.write("""
+            - [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+            - [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+            """)
+
+def day_3():
+    with st.expander("Day 3 - Hash Table"):
+        tab1, tab2, tab3= st.tabs(["Concepts", "Code references","LeetCode"])
+        with tab1:
+            st.write("""
+            ### Readings
+            - [Taking Hash Tables Off The Shelf](https://medium.com/basecs/taking-hash-tables-off-the-shelf-139cbf4752f0), basecs
+            - [Hashing Out Hash Functions](https://medium.com/basecs/hashing-out-hash-functions-ea5dd8beb4dd), basecs
+            ### Videos
+            - [Core: Hash Tables](https://www.coursera.org/lecture/data-structures-optimizing-performance/core-hash-tables-m7UuP), University of California San Diego
+            """)
+        with tab2:
+            python, java = st.tabs(["Python3", "Java"])
+            with python:
+                st.write("""
+                - [Python3 API references for hash tables (dictionaries)](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
+                """)
+            with java:
+                st.write("""
+                - [Java API references for hash tables (hash map)](https://docs.oracle.com/javase/10/docs/api/java/util/HashMap.html)
+                """)
+        with tab3:
+            st.write("""
+            - [Ransom Note](https://leetcode.com/problems/ransom-note/)
+            - [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+            """)
+
 
 def page_layout():
     # ---- TITLE AND HEADER ----
     st.title("The Basics")
 
     # ---- HIDING DEFAUT WATERMARK ----
-    css_example ="""
+    social_template ="""
              <style>
             #MainMenu {visibility: hidden; }
             footer {visibility: hidden; }
             a:link,
             a:visited {
-            color: white;
             background-color: transparent;
             text-decoration: underline;
             }
@@ -80,9 +117,10 @@ def page_layout():
             </div>
             <br><br><br>
     """
-    st.sidebar.markdown(css_example, unsafe_allow_html=True)
+    st.sidebar.markdown(social_template, unsafe_allow_html=True)
     day_1()
     day_2()
+    day_3()
 
 
 def main():

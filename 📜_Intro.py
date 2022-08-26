@@ -12,7 +12,7 @@ def page_config():
 def page_layout():
     st.image("100days.png")
     # ---- HIDING DEFAUT WATERMARK AND ADDING SOCIALS ----
-    css_example ="""
+    social_template ="""
              <style>
             #MainMenu {visibility: hidden; }
             footer {visibility: hidden; }
@@ -37,7 +37,7 @@ def page_layout():
             </div>
             <br><br><br>
     """
-    st.sidebar.markdown(css_example, unsafe_allow_html=True)
+    st.sidebar.markdown(social_template, unsafe_allow_html=True)
     st.write("Week 1 to Week 4: Basics, Data Structures and Algorithms")
     st.write("Week 5 to Week 12: In-depth Practice with Leetcode")
 

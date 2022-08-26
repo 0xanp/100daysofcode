@@ -12,13 +12,12 @@ def page_config():
     st.title("Data Structures")
 
     # ---- HIDING DEFAUT WATERMARK AND ADDING SOCIALS ----
-    css_example ="""
+    social_template ="""
              <style>
             #MainMenu {visibility: hidden; }
             footer {visibility: hidden; }
             a:link,
             a:visited {
-            color: white;
             background-color: transparent;
             text-decoration: underline;
             }
@@ -38,7 +37,7 @@ def page_config():
             </div>
             <br><br><br>
     """
-    st.sidebar.markdown(css_example, unsafe_allow_html=True)
+    st.sidebar.markdown(social_template, unsafe_allow_html=True)
     
 def main():
     page_config()

@@ -65,6 +65,7 @@ def day_3():
         with tab1:
             st.write("""
             ### Readings
+            - [Hash Table cheatsheet for coding interviews](https://www.techinterviewhandbook.org/algorithms/hash-table/), Tech Interview Handbook
             - [Taking Hash Tables Off The Shelf](https://medium.com/basecs/taking-hash-tables-off-the-shelf-139cbf4752f0), basecs
             - [Hashing Out Hash Functions](https://medium.com/basecs/hashing-out-hash-functions-ea5dd8beb4dd), basecs
             ### Videos
